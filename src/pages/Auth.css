@@ -1,0 +1,84 @@
+.Auth {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.entryForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  width: 300px;
+  height: 100vh;
+  position: relative;
+}
+@media (max-width: 375px) {
+  .entry-form {
+    width: 90%;
+  }
+}
+.entryFormItem {
+  width: 100%;
+  height: 50px;
+  padding: 10px;
+  box-sizing: border-box;
+  background: transparent;
+  border: 1px solid #8d230f;
+  border-radius: 10px;
+  color: black;
+  outline: none;
+  margin-bottom: 20px;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 400;
+  font-size: 16px;
+}
+.entryFormItemSelect {
+  cursor: pointer;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  z-index: 5;
+}
+.entryFormItem::placeholder {
+  color: #8d230f;
+  opacity: 0.3;
+}
+.entryFormSend {
+  color: white;
+  background: #8d230f;
+  padding: 10px 15px;
+  border-radius: 15px;
+  border: #8d230f solid 2px;
+  transition: 1s;
+  cursor: pointer;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 400;
+  font-size: 16px;
+}
+.entryFormSend:hover {
+  border: black solid 2px;
+  color: black;
+  transition: 1s;
+}
+.entryFormWrong {
+  color: red;
+  font-size: 13px;
+  font-weight: 300;
+  margin-top: 0;
+}
+.fillTestPassword {
+  background: none;
+  border: none;
+  color:#8d230f;
+  text-decoration: underline;
+  cursor: pointer;
+  opacity: 0.5;
+  display: block;
+}
+.fillTestBtnList{
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
