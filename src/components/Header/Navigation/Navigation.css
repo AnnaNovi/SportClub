@@ -1,0 +1,46 @@
+.Navigation {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.NavItem{
+  font-weight: 600;
+  font-size: 18px;
+  text-align: center;
+  color: white;
+  background: #8d230f;
+  padding: 10px 15px;
+  border-radius: 15px;
+  border: #8d230f solid 2px;
+  transition: 1s;
+  cursor: pointer;
+  margin: 0 5px;
+}
+.NavItem:hover{
+  transition: 1s;
+  color: black;
+  border: black solid 2px;
+}
+.NavItem.active {
+  color: black;
+  border: black solid 2px;
+}
+.retutnToEntryForm {
+  font-weight: 600;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background: #8d230f;
+  padding: 10px 15px;
+  border-radius: 15px;
+  border: black solid 2px;
+  transition: 1s;
+  cursor: pointer;
+  text-decoration: none;
+}
+.retutnToEntryForm:hover {
+  transition: 1s;
+  color: black;
+}
