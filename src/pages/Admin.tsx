@@ -1,9 +1,11 @@
+import Header from "../components/Header/Header";
 
 
 function Admin() {
   return ( 
     <div className="Admin">
-      Admin Page
+      <Header />
+      <footer>2021</footer>
     </div>
   );
 }

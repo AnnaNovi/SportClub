@@ -31,14 +31,12 @@ function Auth() {
   }
   function currentUser(currentUser:string) {
     dispatch(setUserAction(currentUser));
-    console.log('hi');
     if(currentUser === 'admin') {
-      navigate('/admin');
+      navigate('/admin/clients');
     } else if(currentUser === 'head') {
       navigate('/head');
     }
   }
-  console.log(authStatus);
 
   return ( 
     <div className="Auth">
