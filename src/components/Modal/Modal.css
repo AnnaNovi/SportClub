@@ -1,0 +1,55 @@
+.modalOverlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.25);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1100;
+  width: 100%;
+  height: 100vh;
+  align-items: center;
+}
+.Modal {
+  box-sizing: border-box;
+  width: 500px;
+  max-height: 90%;
+  padding: 40px;
+  background: #ffffff;
+  position: absolute;
+}
+.modalClose {
+  fill: black;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.modalClose:hover {
+  transition: 0.5s;
+  fill: #8d230f;
+}
+.modalTitle {
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 600;
+  font-size: 22px;
+  color: #8d230f;
+  margin-bottom: 15px;
+}
+.modalTableInfo {
+  border: 2px solid #8d230f;
+  table-layout: auto;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 16px;
+  width: 100%;
+}
+.modalTableInfo th, td {
+  padding: 5px 5px;
+  border: 1px solid #8d230f;
+  text-align: start;
+}
+
+
+

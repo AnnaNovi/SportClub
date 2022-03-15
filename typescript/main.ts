@@ -2,6 +2,10 @@ export enum ageKind {
   adults = 'Взрослые',
   children = 'Дети'
 }
+export enum hallKind {
+  largeHall = 'Большой',
+  smallHall = 'Малый'
+}
 export enum genderKind {
   male = 'Мужской',
   female = 'Женский'
@@ -38,6 +42,23 @@ export interface groupsList {
   personName: string,
   personPatronymic: string,
   personPhone: string
+}
+export interface cardInfoModal {
+  idCard: number,
+  cardKind: string,
+  cardPrice: number,
+  groupName: string,
+  trainer: string
+}
+export interface groupInfoModal {
+  groupName: string,
+  ageKind: string,
+  sportKind: string,
+  hallKind: string
+}
+export interface studentsInfoModal {
+  idCard: number,
+  client: string
 }
 
 

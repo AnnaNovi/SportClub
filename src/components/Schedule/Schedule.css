@@ -1,0 +1,56 @@
+.Schedule {
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+.scheduleCalendar th {
+  font-weight: bold;
+  color: white;
+  background: #8d230f;
+  border: 1px solid #dddddd;
+  padding: 5px;
+  font-size: 22px;
+}
+.scheduleCalendar {
+  width: 90%;
+  margin: 0 auto;
+  border: 5px solid #8d230f;
+  table-layout: auto;
+  font-family: 'Times New Roman', Times, serif;
+}
+.buttonArrow {
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  cursor: pointer;
+}
+.monthYear {
+  text-align: center;
+  font-weight: 600;
+  font-size: 30px;
+  color: #8d230f;
+}
+.monthYear span {
+  color: black;
+  margin-left: 10px;
+}
+.buttonArrowRight,
+.buttonArrowLeft {
+  color: black;
+  width: 20px;
+  height: 20px;
+}
+.buttonArrowLeft {
+  transform: rotate(180deg);
+}
+.buttonArrowCell {
+  text-align: center;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.buttonArrowCell:hover {
+  transition: 0.5s;
+  background: rgba(141, 35, 15, 0.3);
+}

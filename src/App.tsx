@@ -10,29 +10,38 @@ import { RootState } from './store/store';
 import { ClientsList } from './components';
 import { TrainersList } from './components';
 import GroupsList from './components/GroupsList/GroupsList';
+import Modal from './components/Modal/Modal';
+import { useEffect } from 'react';
+import Schedule from './components/Schedule/Schedule';
 
 function App() {
-  const currentUser = useSelector((state: RootState) => state.user)
+  const currentUser = useSelector((state: RootState) => state.user);
+  const modalState = useSelector((state:RootState) => state.modal);
   return (
-    <div className="App">
-      <Routes>
-        <Route path="/" element={<Auth />}/>
-        <Route path="/admin" element={
-          <RequireAuth>
-            <Admin />
-          </RequireAuth>
-        }>
-          <Route path="clients" element={<ClientsList />} />
-          <Route path="trainers" element={<TrainersList />} />
-          <Route path="groups" element={<GroupsList />} />
-        </Route>
-        <Route path="/head" element={
-          <RequireAuth>
-            <Head />
-          </RequireAuth>
-        }/>
-      </Routes>
-    </div>
+    <>
+      <div className="App">
+        <Routes>
+          <Route path="/" element={<Auth />}/>
+          <Route path="/admin" element={
+            <RequireAuth>
+              <Admin />
+            </RequireAuth>
+          }>
+            <Route path="clients" element={<ClientsList />} />
+            <Route path="trainers" element={<TrainersList />} />
+            <Route path="groups" element={<GroupsList />} />
+            <Route path="schedule" element={<Schedule />} />
+          </Route>
+          <Route path="/head" element={
+            <RequireAuth>
+              <Head />
+            </RequireAuth>
+          }/>
+        </Routes>
+      </div>
+      {modalState.modalOpenState && <Modal />}
+    </>
+    
   );
 }
 

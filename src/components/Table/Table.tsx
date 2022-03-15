@@ -1,7 +1,7 @@
 import TableItem from "./TableItem/TableItem";
 import './Table.css'
 import { useEffect, useState } from "react";
-import { clientsList } from "../../../typescript/main";
+import { clientsList, trainersList, groupsList } from "../../../typescript/main";
 
 
 function Table({tableHeaders, tableBodies, requestTo}: {tableHeaders:string[], tableBodies:string[], requestTo:string}) {
@@ -17,8 +17,8 @@ function Table({tableHeaders, tableBodies, requestTo}: {tableHeaders:string[], t
   const createTHead = tableHeaders.map((tableHeadersItem:string) => {
     return <th className="tableHeader">{tableHeadersItem}</th>
   })
-  const createTBody = dataClients.map((dataItem: clientsList, index: number) => {
-    return <TableItem key={index} tableBodies={tableBodies} tableRow = {dataItem}/>
+  const createTBody = dataClients.map((dataItem: (clientsList | trainersList | groupsList), index: number) => {
+    return <TableItem key={index} tableBodies={tableBodies} tableRow = {dataItem} requestTo = {requestTo}/>
   })
   
   return ( 
