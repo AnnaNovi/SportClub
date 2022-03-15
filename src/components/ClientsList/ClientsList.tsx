@@ -4,11 +4,10 @@ import Table from "../Table/Table";
 function ClientsList() {
 
   const tableHeaders = ["Фамилия", "Имя", "Отчество", "Телефон", "№ абонемента"];
-  const tableBodies = ["personSurname", "personName", "personPatronymic", "personPhone", "idCard"];
+  const tableBodies = ["personSurname", "personName", "personPatronymic", "personPhone", "idCardForModal"];
   
   return ( 
     <div className="ClientsList tableWrapper">
-      <h1>Clients List</h1>
       <Table tableHeaders = {tableHeaders} tableBodies = {tableBodies} requestTo = {'clients'}/>
     </div>
   );
