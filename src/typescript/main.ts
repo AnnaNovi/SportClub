@@ -43,6 +43,12 @@ export interface groupsList {
   personPatronymic: string,
   personPhone: string
 }
+
+export interface paymentList {
+  date: string,
+  idCard: number,
+  client: string
+}
 export interface cardInfoModal {
   idCard: number,
   cardKind: string,

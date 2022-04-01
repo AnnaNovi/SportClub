@@ -13,6 +13,7 @@ import GroupsList from './components/GroupsList/GroupsList';
 import Modal from './components/Modal/Modal';
 import { useEffect } from 'react';
 import Schedule from './components/Schedule/Schedule';
+import Payment from './components/Payment/Payment';
 
 function App() {
   const currentUser = useSelector((state: RootState) => state.user);
@@ -30,6 +31,7 @@ function App() {
             <Route path="clients" element={<ClientsList />} />
             <Route path="trainers" element={<TrainersList />} />
             <Route path="groups" element={<GroupsList />} />
+            <Route path="payment" element={<Payment />} />
             <Route path="schedule" element={<Schedule />} />
           </Route>
           <Route path="/head" element={
