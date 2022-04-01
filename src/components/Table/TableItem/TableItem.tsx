@@ -1,4 +1,4 @@
-import { clientsList, trainersList, groupsList } from "../../../../typescript/main";
+import { clientsList, trainersList, groupsList } from "../../../typescript/main";
 import { setModalAction } from "../../../store/modalReducer";
 import { useDispatch } from "react-redux";
 import './TableItem.css'

@@ -1,21 +1,24 @@
+import { useEffect, useState } from 'react';
 import Calendar from './Calendar/Calendar';
 import './Schedule.css'
 
 function Schedule() {
-  const currentDate = new Date();
+  const [currentDate, setCurrentDate] = useState(new Date());
   const currentYear = currentDate.getFullYear();
   const daysOfWeek = ['ПН', 'ВТ', 'СР', 'ЧТ', 'ПТ', 'СБ', 'ВС'];
   const monthOfYear = ['ЯНВАРЬ', 'ФЕВРАЛЬ', 'МАРТ', 'АПРЕЛЬ', 'МАЙ', 'ИЮНЬ', 'ИЮЛЬ', 'АВГУСТ', 'СЕНТЯБРЬ', 'ОКТЯБРЬ', 'НОЯБРЬ', 'ДЕКАБРЬ'];
   const currentMonth = monthOfYear[currentDate.getMonth()];
+
+  useEffect(() => {}, [currentDate]);
 
   return ( 
     <div className="Schedule">
       <table className="scheduleCalendar">
         <thead>
           <tr>
-            <td class="buttonArrowCell">
-                <button class="buttonArrow">
-                  <svg class="buttonArrowRight" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 34.075 34.075">
+            <td class="buttonArrowCell" onClick={() => setCurrentDate(new Date(currentDate.getFullYear(), currentDate.getMonth() - 1))}>
+                <button className="buttonArrow">
+                  <svg className="buttonArrowRight" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 34.075 34.075">
                   <g>
                     <g>
                       <path d="M24.57,34.075c-0.505,0-1.011-0.191-1.396-0.577L8.11,18.432c-0.771-0.771-0.771-2.019,0-2.79
@@ -26,13 +29,13 @@ function Schedule() {
                   </svg>
                 </button>
             </td>
-            <td class="monthYear" colSpan="5">
+            <td className="monthYear" colSpan="5">
               {currentMonth}
               <span>{currentYear}</span>
             </td>
-            <td class="buttonArrowCell">
-                <button class="buttonArrow">
-                  <svg class="buttonArrowLeft" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 34.075 34.075">
+            <td class="buttonArrowCell" onClick={() => setCurrentDate(new Date(currentDate.getFullYear(), currentDate.getMonth() + 1))}>
+                <button className="buttonArrow">
+                  <svg className="buttonArrowLeft" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 34.075 34.075">
                   <g>
                     <g>
                       <path d="M24.57,34.075c-0.505,0-1.011-0.191-1.396-0.577L8.11,18.432c-0.771-0.771-0.771-2.019,0-2.79
@@ -51,7 +54,7 @@ function Schedule() {
           </tr>
         </thead>
         <tbody>
-          <Calendar />
+          <Calendar month = {currentDate}/>
         </tbody>
       </table>
     </div>
