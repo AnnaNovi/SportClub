@@ -50,7 +50,31 @@
   cursor: pointer;
   transition: 0.5s;
 }
-.buttonArrowCell:hover {
+.buttonArrowCell:hover,
+.calendarDays:hover {
   transition: 0.5s;
   background: rgba(141, 35, 15, 0.3);
+}
+.calendarDays {
+  border: 1px solid #8d230f;
+  text-align: center;
+  font-weight: 600;
+  font-size: 20px;
+  position: relative;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.calendarDaysHide {
+  opacity: 0.5;
+}
+.calendarDaysCurrent {
+  background: rgba(141, 35, 15, 0.5);
+}
+.countLessons {
+  font-weight: 600;
+  font-size: 16px;
+  color: #8d230f;
+  position: absolute;
+  top: 1px;
+  right: 5px;
 }

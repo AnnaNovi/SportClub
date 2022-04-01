@@ -3,7 +3,7 @@ interface modalContent {
   modalAction?: string,
   modalActionDetail?: string,
   modalPerson?: string,
-  modalData?: number
+  modalData?: number | Date
 }
 
 export const modalReducer = (

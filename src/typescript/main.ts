@@ -61,4 +61,16 @@ export interface studentsInfoModal {
   client: string
 }
 
+export interface scheduleInfoModal {
+  idSchedule: number,
+  idGroup: number,
+  groupName: string,
+  hallKind: string,
+  timeStart: number,
+  timeEnd: number,
+  lessonRepeat: boolean,
+  lessonDay: number | null,
+  lessonDate: Date | null
+}
+
 

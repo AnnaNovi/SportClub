@@ -1,7 +1,7 @@
 import TableItem from "./TableItem/TableItem";
 import './Table.css'
 import { useEffect, useState } from "react";
-import { clientsList, trainersList, groupsList } from "../../../typescript/main";
+import { clientsList, trainersList, groupsList } from "../../typescript/main";
 
 
 function Table({tableHeaders, tableBodies, requestTo}: {tableHeaders:string[], tableBodies:string[], requestTo:string}) {
