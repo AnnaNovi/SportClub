@@ -1,11 +1,11 @@
-import { clientsList, trainersList, groupsList } from "../../../typescript/main";
+import { clientsList, trainersList, groupsList, paymentList } from "../../../typescript/main";
 import { setModalAction } from "../../../store/modalReducer";
 import { useDispatch } from "react-redux";
 import './TableItem.css'
 
 
 
-function TableItem({tableRow, tableBodies, requestTo}: {tableRow: (clientsList | trainersList | groupsList), tableBodies:string[], requestTo:string}) {
+function TableItem({tableRow, tableBodies, requestTo}: {tableRow: (clientsList | trainersList | groupsList | paymentList), tableBodies:string[], requestTo:string}) {
   const dispatch = useDispatch();
 
   function handleBtnModal(tableData: string, tableRow: any) {
