@@ -1,5 +1,5 @@
 import Table from "../Table/Table";
-
+import ButtonsList from "../ButtonsList/ButtonsList";
 
 function GroupsList() {
 
@@ -8,6 +8,7 @@ function GroupsList() {
   
   return ( 
     <div className="GroupsList tableWrapper">
+      <ButtonsList format={'GroupsList'}/>
       <Table tableHeaders = {tableHeaders} tableBodies = {tableBodies} requestTo = {'groups'}/>
     </div>
   );

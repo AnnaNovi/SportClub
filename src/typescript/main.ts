@@ -1,18 +1,24 @@
 export enum ageKind {
-  adults = 'Взрослые',
-  children = 'Дети'
+  'Взрослые' = 1,
+  'Дети'
 }
 export enum hallKind {
-  largeHall = 'Большой',
-  smallHall = 'Малый'
+  'Большой' = 1,
+  'Малый'
 }
 export enum genderKind {
-  male = 'Мужской',
-  female = 'Женский'
+  'Муж' = 1,
+  'Жен'
 }
 export enum personType {
-  client = 'Клиент',
-  trainer = 'Тренер'
+  'Клиент' = 1,
+  'Тренер'
+}
+export enum cardKind {
+  'Полный' = 1,
+  'Дополнительный',
+  'Разовый',
+  'Детский'
 }
 
 export interface clientsList {
