@@ -1,5 +1,5 @@
-import Table from "../Table/Table"
-
+import Table from "../Table/Table";
+import ButtonsList from "../ButtonsList/ButtonsList";
 
 function TrainersList() {
 
@@ -8,6 +8,7 @@ function TrainersList() {
 
   return ( 
     <div className="TrainersList tableWrapper">
+      <ButtonsList format={'TrainersList'}/>
       <Table tableHeaders = {tableHeaders} tableBodies = {tableBodies} requestTo = {'trainers'}/>
     </div>
     
