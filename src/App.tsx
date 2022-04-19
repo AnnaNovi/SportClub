@@ -10,12 +10,10 @@ import { ClientsList } from './components';
 import { TrainersList } from './components';
 import GroupsList from './components/GroupsList/GroupsList';
 import Modal from './components/Modal/Modal';
-import { useEffect } from 'react';
 import Schedule from './components/Schedule/Schedule';
 import Payment from './components/Payment/Payment';
 
 function App() {
-  const currentUser = useSelector((state: RootState) => state.user);
   const modalState = useSelector((state:RootState) => state.modal);
   return (
     <>

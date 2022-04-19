@@ -1,0 +1,13 @@
+.modalFooter {
+  display: flex;
+  justify-content: center;
+}
+.modalFormSelectInfo{
+  font-weight: 400;
+  font-size: 16px;
+  margin: 5px 0;
+}
+.modalFormSelectInfo span {
+  font-weight: 600;
+  margin-right: 5px;
+}
