@@ -20,6 +20,14 @@ export enum cardKind {
   'Разовый',
   'Детский'
 }
+export enum sportKind {
+  'Айкидо' = 1,
+  'Такемусу Айкидо',
+  'Иайдо', 
+  'Каратэ',
+  'Дзюдо',
+  'Йога'
+}
 
 export interface clientsList {
   idPerson: number,
@@ -44,10 +52,8 @@ export interface groupsList {
   ageKind: string,
   sportKind: string,
   hallKind: string,
-  personSurname: string,
-  personName: string,
-  personPatronymic: string,
-  personPhone: string
+  trainer: string,
+  students: number
 }
 
 export interface paymentList {

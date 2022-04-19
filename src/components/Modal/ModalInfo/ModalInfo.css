@@ -51,10 +51,6 @@ td {
   border: 1px solid #8d230f;
   text-align: start;
 }
-.modalFooter {
-  display: flex;
-  justify-content: center;
-}
 .modalActionBtn {
   color: white;
   background: #8d230f;
