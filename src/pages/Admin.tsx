@@ -9,7 +9,7 @@ function Admin() {
   return ( 
     <div className="Admin">
       <Header />
-      <footer style={{position: 'absolute', bottom: '20px', right: '50%', transform: 'translate(50%, 0%)'}}>{`${currentDate}.${currentMonth}.${currentYear}`}</footer>
+      <footer style={{height: '40px', display: 'flex', justifyContent: 'center', alignItems: 'center'}}>{`${currentDate}.${currentMonth}.${currentYear}`}</footer>
     </div>
   );
 }
